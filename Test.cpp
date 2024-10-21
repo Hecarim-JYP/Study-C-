@@ -3,12 +3,14 @@ using namespace std;
 
 int main() 
 {
-	int a = 10;
-	int* ptr = &a;
-	cout << "ptr이 가리키는 값 : " << *ptr << endl;
-	cout << "ptr이 가리키는 주소값 : " << ptr << endl;
-	cout << "a의 값 : " << a << endl;
-	cout << "a의 주소값 : " << &a << endl;
-	
-	return 0;
+	int* intPtr;
+	intPtr = new int[3];
+
+	*intPtr = 10;
+	*(intPtr + 1) = 20;
+	intPtr[2] = 30;
+
+	cout << "1번째 값 : " << *intPtr << endl;
+	cout << "2번째 값 : " << *(intPtr + 1) << endl;
+	cout << "3번째 값 : " << intPtr[2] << endl;
 }
